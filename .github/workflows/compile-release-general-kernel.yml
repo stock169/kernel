@@ -56,7 +56,7 @@ on:
         type: choice
         options:
           - kernel-config/release/general
-          - kernel-config/release/oec
+          - kernel-config/release/oec6.12
           - false
       kernel_patch:
         description: "Set the directory for kernel patches"
@@ -65,7 +65,7 @@ on:
         type: choice
         options:
           - kernel-patch/beta
-          - kernel-patch/oec
+          - kernel-patch/oec6.12
           - false
       auto_patch:
         description: "Set whether to use kernel patches"
