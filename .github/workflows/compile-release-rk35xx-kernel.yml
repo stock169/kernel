@@ -69,8 +69,7 @@ on:
         type: choice
         options:
           - gcc
-          - gcc 14.3
-
+          - gcc-14.3
       compress_format:
         description: "Set the initrd compression format"
         required: false
