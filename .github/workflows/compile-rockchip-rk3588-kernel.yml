@@ -34,6 +34,16 @@ on:
         required: false
         default: true
         type: boolean
+      silent_log:
+        description: "Use silent logging"
+        required: false
+        default: true
+        type: boolean
+      delete_source:
+        description: "Delete the source after compilation"
+        required: false
+        default: true
+        type: boolean
       kernel_package:
         description: "Select compile package list"
         required: false
@@ -42,23 +52,6 @@ on:
         options:
           - all
           - dtbs
-      kernel_patch:
-        description: "Set the directory for kernel patches"
-        required: false
-        default: "kernel-patch/oec"
-        type: choice
-        options:
-          - kernel-patch/beta
-          - kernel-patch/oec
-          - false
-      auto_patch:
-        description: "Set whether to use kernel patches"
-        required: false
-        default: "true"
-        type: choice
-        options:
-          - true
-          - false                    
       kernel_toolchain:
         description: "Select the compilation toolchain"
         required: false
@@ -135,7 +128,9 @@ jobs:
           sudo -E apt-get clean
           sudo sed -i '/NVM_DIR/d;/skel/d' /root/{.bashrc,.profile}
           sudo rm -rf ~/{.cargo,.dotnet,.rustup}
-          sudo timedatectl set-timezone "${TZ}"
+          sudo -E timedatectl set-timezone "${TZ}"
+          sudo -E apt-get install -y ntpdate
+          sudo -E ntpdate pool.ntp.org
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Create simulated physical disk
