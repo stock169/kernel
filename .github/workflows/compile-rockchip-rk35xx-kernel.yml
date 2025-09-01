@@ -52,23 +52,6 @@ on:
         options:
           - all
           - dtbs
-      kernel_patch:
-        description: "Set the directory for kernel patches"
-        required: false
-        default: "kernel-patch/oec"
-        type: choice
-        options:
-          - kernel-patch/beta
-          - kernel-patch/oec
-          - false
-      auto_patch:
-        description: "Set whether to use kernel patches"
-        required: false
-        default: "true"
-        type: choice
-        options:
-          - true
-          - false          
       kernel_toolchain:
         description: "Select the compilation toolchain"
         required: false
