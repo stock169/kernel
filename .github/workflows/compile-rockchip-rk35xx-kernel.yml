@@ -20,6 +20,7 @@ on:
           - unifreq/linux-6.1.y-rockchip
           - codesnas/linux-5.10.y-rk35xx
           - codesnas/linux-6.1.y-rockchip
+          - armbian/linux-rockchip@rk-6.1-rkr6.1
           - armbian/linux-rockchip@rk-6.1-rkr5.1
           - armbian/linux-rockchip@rk-6.1-rkr5
           - armbian/linux-rockchip@rk-6.1-rkr3
@@ -34,6 +35,7 @@ on:
           - 6.1.75
           - 6.1.99
           - 6.1.115
+          - 6.1.118
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
