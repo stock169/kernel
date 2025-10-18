@@ -57,6 +57,7 @@ on:
         options:
           - kernel-patch/beta
           - kernel-patch/oec
+          - kernel-patch/wxy
           - false
       auto_patch:
         description: "Set whether to use kernel patches"
