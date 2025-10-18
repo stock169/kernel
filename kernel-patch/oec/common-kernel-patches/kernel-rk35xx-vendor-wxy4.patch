@@ -51,7 +51,7 @@ index 000000000000..aa1291f3ff5e
 +
 +/ {
 +	model = "Onething OEC Box";
-+	compatible ="rockchip,rk3566-onething-oec-box", "rockchip,rk3566";
++	compatible ="rockchip,rk3566-wxy-oec-turbo-4g", "rockchip,rk3566";
 +
 +	chosen: chosen {
 +		bootargs = "earlycon=uart8250,mmio32,0xfe660000 console=ttyFIQ0";
